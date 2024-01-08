@@ -1,130 +1,119 @@
-*{
-    border:1px solid purple;
+* {
+  border: 1px solid purple;
 }
 header div {
-    display:flex;
-    width: 100%;
-    justify-content:space-between;
-    background-color:grey;
-    height: 40px;
-    position: fixed;
-    top:0;
-    left: 0;
-    box-shadow: -8px -1px 22px rgba(0,0,0,0.4); 
-
-
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background-color: grey;
+  height: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: -8px -1px 22px rgba(0, 0, 0, 0.4);
 }
 header div nav ul {
-    display: flex;
-    margin-right: 50px;
+  display: flex;
+  margin-right: 50px;
 }
 header div nav ul li {
-    display: inline;
-    margin-right: 10px;
-    margin-left: 10px;
-
+  display: inline;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 header div nav ul li a {
-    text-decoration: none;
-    color:white;
+  text-decoration: none;
+  color: white;
 }
-
-
-
 
 body section div {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: left;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: left;
 }
 body section div article {
-    display: flex;
-    flex-direction: column;
-    margin:100px;
-    margin-right: 0px;
-    margin-top:170px;
-    width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 100px;
+  margin-right: 0px;
+  margin-top: 170px;
+  width: 50%;
 }
-body section div  div.my-image {
-    background-color: none;
-    width: 30%;
-    height: auto;
-    display: flex;
-    justify-content: center;
+body section div div.my-image {
+  background-color: none;
+  width: 30%;
+  height: auto;
+  display: flex;
+  justify-content: center;
 }
 body section div div.my-image img {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    margin-top:170px;
-    box-shadow: 0px 0px 22px rgba(0,0,0,0.4); 
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin-top: 170px;
+  box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.4);
 }
 body section div aside {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
 body section aside ul {
-    padding-left: 30px;
-    margin-bottom: 0;
-    padding-top:263px;
-    position: fixed;
+  padding-left: 30px;
+  margin-bottom: 0;
+  padding-top: 263px;
+  position: fixed;
 }
 body section aside ul li {
-    margin-bottom: 20px;
-    list-style-type: none;
-
-
+  margin-bottom: 20px;
+  list-style-type: none;
 }
-body section aside ul #line{
-    text-orientation:mixed;
-    writing-mode: vertical-rl;
-    padding-left: 6px;
-    margin-bottom: 0;
-    
+body section aside ul #line {
+  text-orientation: mixed;
+  writing-mode: vertical-rl;
+  padding-left: 6px;
+  margin-bottom: 0;
 }
 body header div a {
-    padding-left: 20px;
-    text-decoration: none;
-    color: white; 
-    margin: 18px;
-    
+  padding-left: 20px;
+  text-decoration: none;
+  color: white;
+  margin: 18px;
 }
 body {
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-color:white
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-color: white;
 }
-h1{
-    color :red;
-    font-weight: bold;
-    font-size: 3.5rem;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin-top:0;
-    margin-bottom: 0;
+h1 {
+  color: red;
+  font-weight: bold;
+  font-size: 3.5rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 body section div article section p {
-    color:grey;
+  color: grey;
 }
 span {
-    color:grey;
-    font-size: 2rem;
-    margin-top: 0;
+  color: grey;
+  font-size: 2rem;
+  margin-top: 0;
 }
 body section div article ul {
-    padding-left :120px;
-    padding-top:2%
+  padding-left: 120px;
+  padding-top: 2%;
 }
 body section div article ul li {
-    display: inline;
-    color: grey;
-    padding: 5%;
-    padding-left:0;
+  display: inline;
+  color: grey;
+  padding: 5%;
+  padding-left: 0;
 }
 section div article header p {
-    color: green;
+  color: green;
 }
-
 
 /* 
 *{
@@ -132,4 +121,3 @@ section div article header p {
     border-color: blueviolet;
     border-width: 1px;
 } */
-
