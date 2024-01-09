@@ -37,7 +37,7 @@ body article section#home {
   flex-direction: row;
   justify-content: left;
 }
-body section div article {
+body article section#home div#content-container {
   display: flex;
   flex-direction: column;
   margin: 100px;
@@ -59,22 +59,22 @@ body article section div.my-image img {
   margin-top: 170px;
   box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.4);
 }
-body section div aside {
+body aside {
   display: flex;
   flex-direction: column;
   justify-content: end;
 }
-body section aside ul {
+body aside ul {
   padding-left: 30px;
   margin-bottom: 0;
   padding-top: 263px;
   position: fixed;
 }
-body section aside ul li {
+body aside ul li {
   margin-bottom: 20px;
   list-style-type: none;
 }
-body section aside ul #line {
+body aside ul #line {
   text-orientation: mixed;
   writing-mode: vertical-rl;
   padding-left: 6px;
@@ -93,7 +93,7 @@ h1 {
   margin-bottom: 0;
 }
 
-body section div article section p {
+body article section#home div.brief-intro p {
   color: grey;
 }
 span {
@@ -101,11 +101,11 @@ span {
   font-size: 2rem;
   margin-top: 0;
 }
-body section div article ul {
+body article section#home div#content-container div.brief-intro ul {
   padding-left: 120px;
   padding-top: 2%;
 }
-body section div article ul li {
+body article section#home div#content-container div.brief-intro ul li {
   display: inline;
   color: grey;
   padding: 5%;
