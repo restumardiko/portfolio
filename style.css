@@ -3,19 +3,25 @@
 }
 header div {
   display: flex;
-  width: 100%;
   justify-content: space-between;
-  background-color: grey;
-  height: 40px;
-  position: fixed;
+  background-color: white;
+  height: 57px;
+  width: 100%;
   top: 0;
   left: 0;
-  box-shadow: -8px -1px 22px rgba(0, 0, 0, 0.4);
+  border: 0;
+  border-bottom: 1px;
+  border-color: #e2e3e7;
+  border-style: solid;
+
+  position: absolute;
+  /* 
+  box-shadow: -8px -1px 22px rgba(0, 0, 0, 0.4); */
 }
 body header div a {
   padding-left: 20px;
   text-decoration: none;
-  color: white;
+  color: grey;
   margin: 18px;
 }
 header div nav ul {
@@ -29,7 +35,7 @@ header div nav ul li {
 }
 header div nav ul li a {
   text-decoration: none;
-  color: white;
+  color: grey;
 }
 
 body article section#home {
@@ -40,7 +46,8 @@ body article section#home {
 body article section#home div#content-container {
   display: flex;
   flex-direction: column;
-  margin: 100px;
+  margin-left: 150px;
+  margin-bottom: 150px;
   margin-right: 0px;
   margin-top: 170px;
   width: 50%;
@@ -71,6 +78,9 @@ body aside ul {
 body aside ul li {
   margin-bottom: 20px;
   list-style-type: none;
+}
+body aside ul li a {
+  color: grey;
 }
 body aside ul #line {
   text-orientation: mixed;
