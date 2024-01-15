@@ -16,9 +16,9 @@
 
         <nav>
           <ul>
-            <li><a href="about.html">About</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="project.html">Project</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -56,7 +56,37 @@
           <img src="fotoku.jpg" alt="" />
         </div>
       </section>
-      <section id="about"></section>
+      <section id="about">
+        <div class="about-container">
+          <header class="section-header">
+            <div class="section-title-wrapper">
+              <div class="section-title-line"></div>
+              <h1 class="section-title">About Me</h1>
+            </div>
+          </header>
+          <div class="about">
+            <p class="text">Hi there! I’m Josh. I’m a passionate introvert who loves building things with 
+              code.
+              My first experience with programming was when I was 12, but I didn’t last 
+              long: I was a big fan of computer-animated TV shows like Reboot, and I 
+              decided I wanted to do “computer graphics”. My mom bought me a C++ 
+              Reference Manual. It was several hundred pages, and totally inscrutable to me.
+              Years later, I decided to try learning Python. It was a radically different 
+              experience. I distinctly remember the moment it clicked; I was watching The 
+              Price is Right, and they were spinning the big wheel. A contestant landed on 
+              0.70, and it made me wonder: statistically, what was their best move?
+              It occurred to me: I had the skills to build a simulation! So I threw together a 
+              Python script that would run thousands of simulations to work out what the 
+              right answer was. 15 minutes later, I had the answer. My burgeoning skillset 
+              was a superpower: I could derive answers that were previously off-limits to me. 
+              It was magic.
+              Since then, I’ve been honing my skills and learning Javascript. I recently 
+              graduated from Apex College’s 12-week intensive Web Development Bootcamp 
+              program. I’m seeking a full-time role where I can help a company achieve their 
+              goals.</p>
+          </div>
+        </div>
+      </section>
       <section id="project"></section>
       <section id="contact">
         <div class="container">
@@ -67,29 +97,35 @@
             </h3>
             <div class="form">
               <div class="email-form">
-                <input
-                  class="text-field w-input"
-                  maxlength="256"
-                  name="name"
-                  data-name="Name"
-                  placeholder="Enter Your Full Name"
-                  type="text"
-                  id="name"
-                  required=""
-                />
-              </div>
+                <div class="text-field-wrapper">
+                  <input
+                    class="text-field w-input"
+                    maxlength="256"
+                    name="name"
+                    data-name="Name"
+                    placeholder="Enter Your Name"
+                    type="text"
+                    id="name"
+                    required=""
+                  />
+                  <div class="text-field-spacer"></div>
+                  <input
+                    class="text-field w-input"
+                    maxlength="256"
+                    name="email"
+                    data-name="Email"
+                    placeholder="Enter Your Email"
+                    type="email"
+                    id="email"
+                    required=""
+                  />
+                </div>
+                
+              
               <div class="text-field-spacer"></div>
-              <input
-                class="text-field w-input"
-                maxlength="256"
-                name="email"
-                data-name="Email"
-                placeholder="Enter Your Email"
-                type="email"
-                id="email"
-                required=""
-              /><textarea
-                placeholder="How Can I Help You?"
+              
+              <textarea 
+                placeholder="Say Hello!"
                 maxlength="5000"
                 id="Message"
                 name="Message"
@@ -103,10 +139,10 @@
                 value="Get In Touch"
               />
               <div class="success-message w-form-done">
-                <div>Thank you! Your submission has been received!</div>
+                <div style="display: none;">Thank you! Your submission has been received!</div>
               </div>
               <div class="w-form-fail">
-                <div>Oops! Something went wrong while submitting the form.</div>
+                <div style="display: none;">Oops! Something went wrong while submitting the form.</div>
               </div>
             </div>
           </div>
@@ -137,10 +173,10 @@
         <li>
           <a href="#"><i class="fab fa-facebook"></i></a>
         </li>
-        <li id="line">_____________</li>
+        <li id="line">________</li>
       </ul>
     </aside>
-    <footer>Footer 2024</footer>
+    <footer>BhrerestuBhumi 2024</footer>
     <script src="script.js"></script>
   </body>
 </html>
