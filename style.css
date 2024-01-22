@@ -1,5 +1,4 @@
 * {
-  border: 1px solid purple;
   font-family: Inconsolata, monospace;
   /* color: #000026; */
   font-size: 14px;
@@ -37,6 +36,7 @@ body header div a {
   color: grey;
   margin: 18px;
 }
+
 header div nav ul {
   display: flex;
   margin-right: 50px;
@@ -67,17 +67,45 @@ body article section#home div#content-container {
 }
 body article section div.my-image {
   background-color: none;
-  width: 30%;
+  width: 40%;
   height: auto;
   display: flex;
   justify-content: center;
 }
+body article section div.my-image div.trans {
+  position: absolute;
+  display: block;
+  height: 43%;
+  width: 10%;
+  background-color: grey;
+  opacity: 50%;
+  border: white solid 1px;
+  opacity: 1; /* Atur awal opasitas ke 0 */
+  transform: translateY(-500px); /* Geser elemen ke bawah sejauh 50px */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+body article section div.my-image div.trans.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body article section div.my-image div.trans1 {
+  right: 331px;
+  position: absolute;
+  display: block;
+  height: 70%;
+  width: 10%;
+  background-color: yellow;
+  opacity: 50%;
+  border: white solid 1px;
+}
+
 body article section div.my-image img {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  margin-top: 170px;
-  box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.4);
+  width: 518px;
+  height: 614px;
+  /* border-radius: 50%; */
+  /* margin-top: 170px; */
+  /* box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.4); */
 }
 body aside {
   display: block;
@@ -174,7 +202,7 @@ div.about {
   width: 120px;
   height: 2px;
   margin-bottom: 10px;
-  background-color: black;
+  background-color: grey;
 }
 .section-title-wrapper {
   display: inline-block;
