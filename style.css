@@ -71,37 +71,68 @@ body article section div.my-image {
   height: auto;
   display: flex;
   justify-content: center;
+  box-sizing: border-box;
 }
 body article section div.my-image div.trans {
+  right: -8px;
   position: absolute;
   display: block;
-  height: 43%;
+  height: 86%;
   width: 10%;
   background-color: grey;
   opacity: 50%;
   border: white solid 1px;
-  opacity: 1; /* Atur awal opasitas ke 0 */
   transform: translateY(-500px); /* Geser elemen ke bawah sejauh 50px */
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 body article section div.my-image div.trans.active {
-  opacity: 1;
+  opacity: 0.5;
   transform: translateY(0);
 }
 
 body article section div.my-image div.trans1 {
-  right: 331px;
+  right: 125px;
   position: absolute;
   display: block;
-  height: 70%;
+  height: 86%;
   width: 10%;
   background-color: yellow;
-  opacity: 50%;
-  border: white solid 1px;
+  opacity: 20%;
+  border: grey solid 1px;
+}
+body article section div.my-image div.trans2 {
+  right: 258px;
+  position: absolute;
+  display: block;
+  height: 86%;
+  width: 10%;
+  background-color: green;
+  opacity: 20%;
+  border: grey solid 1px;
+}
+body article section div.my-image div.trans3 {
+  right: 392px;
+  position: absolute;
+  display: block;
+  height: 86%;
+  width: 10%;
+  background-color: blue;
+  opacity: 20%;
+  border: grey solid 1px;
+}
+body article section div.my-image div.trans4 {
+  right: 525px;
+  position: absolute;
+  display: block;
+  height: 86%;
+  width: 10%;
+  background-color: red;
+  opacity: 20%;
+  border: grey solid 1px;
 }
 
 body article section div.my-image img {
-  width: 518px;
+  width: 550px;
   height: 614px;
   /* border-radius: 50%; */
   /* margin-top: 170px; */
