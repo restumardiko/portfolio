@@ -1,23 +1,89 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
 * {
   font-family: Inconsolata, monospace;
   /* color: #000026; */
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 400;
-  box-sizing: content-box;
-}
-section {
-  position: relative;
-  padding-top: 100x;
-  padding-bottom: 100px;
-  background-color: #fff;
+  /* border: purple 1px solid; */
 }
 
-header div {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+section {
+  position: static;
+  height: 42rem;
+}
+/* navigation */
+nav {
   display: flex;
-  justify-content: space-between;
+  position: absolute;
+  z-index: 1;
+  justify-content: end;
   background-color: white;
-  height: 57px;
+  height: 3rem;
   width: 100%;
   top: 0;
   left: 0;
@@ -25,141 +91,77 @@ header div {
   border-bottom: 1px;
   border-color: #e2e3e7;
   border-style: solid;
-
   position: relative;
-  /* 
-  box-shadow: -8px -1px 22px rgba(0, 0, 0, 0.4); */
 }
-body header div a {
-  padding-left: 20px;
-  text-decoration: none;
-  color: grey;
-  margin: 18px;
-}
-
-header div nav ul {
+.box-nav {
+  width: 35%;
   display: flex;
-  margin-right: 50px;
+  justify-content: space-around;
 }
-header div nav ul li {
-  display: inline;
-  margin-right: 10px;
-  margin-left: 10px;
+.box-nav li {
+  display: inline-block;
 }
-header div nav ul li a {
+.navi {
+  padding: 0.6rem;
+  margin: auto;
   text-decoration: none;
-  color: grey;
+  display: block;
 }
-
-body article section#home {
+/* section home */
+section#home {
   display: flex;
   flex-direction: row;
-  justify-content: left;
+  justify-content: right;
 }
-body article section#home div#content-container {
+#content-container {
   display: flex;
   flex-direction: column;
-  margin-left: 150px;
-  margin-bottom: 150px;
-  margin-right: 0px;
-  margin-top: 170px;
+  justify-content: center;
   width: 50%;
 }
-body article section div.my-image {
+div.fly-sheet {
   background-color: none;
   width: 40%;
   height: auto;
   display: flex;
-  justify-content: center;
+  position: relative;
+  justify-content: right;
   box-sizing: border-box;
 }
-body article section div.my-image div.trans {
-  right: -8px;
-  position: absolute;
-  display: block;
-  height: 86%;
-  width: 10%;
+.trans {
   background-color: grey;
-  opacity: 50%;
-  border: white solid 1px;
-  transform: translateY(-500px); /* Geser elemen ke bawah sejauh 50px */
+  transform: translateY(-30rem); /* Geser elemen ke bawah sejauh 50px */
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
-body article section div.my-image div.trans.active {
+body article section div.fly-sheet div.trans.active {
   opacity: 0.5;
   transform: translateY(0);
 }
 
-body article section div.my-image div.trans1 {
-  right: 125px;
-  position: absolute;
+.brick {
+  position: relative;
   display: block;
-  height: 86%;
-  width: 10%;
-  background-color: yellow;
+  height: 100%;
+  width: 17%;
   opacity: 20%;
-  border: grey solid 1px;
+  border: grey solid 0.06rem;
 }
-body article section div.my-image div.trans2 {
-  right: 258px;
-  position: absolute;
-  display: block;
-  height: 86%;
-  width: 10%;
+.trans1 {
+  background-color: purple;
+}
+.trans5 {
+  background-color: orange;
+}
+.trans2 {
   background-color: green;
-  opacity: 20%;
-  border: grey solid 1px;
 }
-body article section div.my-image div.trans3 {
-  right: 392px;
-  position: absolute;
-  display: block;
-  height: 86%;
-  width: 10%;
+.trans3 {
   background-color: blue;
-  opacity: 20%;
-  border: grey solid 1px;
 }
-body article section div.my-image div.trans4 {
-  right: 525px;
-  position: absolute;
-  display: block;
-  height: 86%;
-  width: 10%;
+.trans4 {
   background-color: red;
-  opacity: 20%;
-  border: grey solid 1px;
 }
 
-body article section div.my-image img {
-  width: 550px;
-  height: 614px;
-  /* border-radius: 50%; */
-  /* margin-top: 170px; */
-  /* box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.4); */
-}
-body aside {
-  display: block;
-  position: fixed;
-  top: 365px;
-}
-body aside ul {
-  display: block;
-  width: fit-content;
-}
-body aside ul li {
-  margin-bottom: 20px;
-  list-style-type: none;
-}
-body aside ul li a {
-  color: grey;
-}
-body aside ul #line {
-  text-orientation: mixed;
-  writing-mode: vertical-rl;
-  padding-left: 3px;
-  margin-bottom: 0;
-}
 body {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   background-color: white;
@@ -173,142 +175,116 @@ h1 {
   margin-bottom: 0;
 }
 
-body article section#home div.brief-intro p {
+.skill {
   color: grey;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 span {
   color: grey;
   font-size: 2rem;
   margin-top: 0;
 }
-body article section#home div#content-container div.brief-intro ul {
-  padding-left: 120px;
-  padding-top: 2%;
+div.brief-intro ul {
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
-body article section#home div#content-container div.brief-intro ul li {
-  display: inline;
+.brief-intro ul li {
+  display: inline-block;
+  padding: 2%;
   color: grey;
-  padding: 5%;
-  padding-left: 0;
 }
 section div article header p {
   color: green;
 }
 /*about me section*/
 div.about {
-  padding: 50px 100px;
+  padding: 3rem 8rem;
 }
 .about-container {
-  max-width: 1280px;
+  max-width: 80%;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 100px;
-  padding-left: 100px;
-  -webkit-box-flex: 1;
 }
 
 .text {
-  -webkit-column-count: 2;
   column-count: 2;
-  -webkit-column-gap: 56px;
-  column-gap: 50px;
-  -webkit-column-rule-style: none;
-  column-rule-style: none;
-  -webkit-column-rule-width: 0px;
+  column-gap: 3rem;
   column-rule-width: 0px;
 }
 
+.section-title-wrapper {
+  display: flex;
+  flex-direction: row;
+}
 .section-title {
   display: inline-block;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-left: 24px;
-  font-size: 36px;
-  line-height: 42px;
-  text-transform: capitalize;
+
+  margin-left: 1.5rem;
+  font-size: 2rem;
+  line-height: 2.5rem;
 }
 .section-title-line {
   position: static;
-  display: inline-block;
-  width: 120px;
-  height: 2px;
-  margin-bottom: 10px;
+  width: 8rem;
+  height: 0.125rem;
+  margin-top: 1.4rem;
   background-color: grey;
 }
-.section-title-wrapper {
-  display: inline-block;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-}
 .section-header {
-  margin-bottom: 64px;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
+  margin-bottom: 4rem;
+  margin-top: 4rem;
 }
 
 /* section contact*/
 section#contact {
-  padding-bottom: 200px;
 }
-body article section#contact div.container {
-  max-width: 1280px;
+section#contact div.container {
   margin-right: auto;
   margin-left: auto;
-  padding-right: 64px;
-  padding-left: 64px;
-  -webkit-box-flex: 1;
+  margin-top: 10%;
+  width: 90%;
 }
 .contact-grid {
+  margin-top: ;
   position: relative;
   z-index: 1;
-  display: -ms-grid;
   display: grid;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
+
   align-items: center;
   grid-auto-columns: 1fr;
-  grid-column-gap: 16px;
-  grid-row-gap: 16px;
-  -ms-grid-columns: 1fr 0.25fr 1fr;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
   grid-template-columns: 1fr 0.1fr 1fr;
-  -ms-grid-rows: auto;
   grid-template-rows: auto;
 }
 .contact-title {
-  margin-top: 0px;
-  margin-bottom: 0px;
   color: red;
-  font-size: 42px;
-  line-height: 48px;
+  font-size: 2.5rem;
+  line-height: 3rem;
 }
 .text-field {
   width: 100%;
-  height: 48px;
-  margin-bottom: 32px;
-  padding-right: 0px;
-  padding-left: 0px;
+  height: 3rem;
+  margin-bottom: 2rem;
+
   border-style: none none solid;
-  border-bottom-width: 1px;
+  border-bottom-width: 0.0625rem;
   border-bottom-color: #000026;
   border-radius: 0px;
   background-color: transparent;
-  -webkit-transition: border-color 300ms ease;
-  transition: border-color 300ms ease;
 }
 .text-field-spacer {
-  width: 48px;
+  width: 3rem;
 }
 .text-field-wrapper {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   flex-direction: row;
 }
 .text-field.min-height {
-  min-height: 120px;
+  min-height: 7.5rem;
   background-color: transparent;
 }
 textarea {
@@ -317,45 +293,56 @@ textarea {
 .filled-btn {
   position: relative;
   overflow: hidden;
-  margin-top: 16px;
-  margin-right: 16px;
-  padding: 10px 32px;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  padding: 0.8rem 2rem;
   border-radius: 0px;
   background-color: red;
-  -webkit-transform: perspective(0px);
-  transform: perspective(0px);
-  -webkit-transition: background-color 200ms ease;
-  transition: background-color 200ms ease;
   color: #fff;
-  font-size: 20px;
-  line-height: 26px;
-  font-weight: 400;
-  letter-spacing: 0.4px;
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.025rem;
   text-decoration: none;
   text-transform: capitalize;
 }
+/* footer */
 footer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 16px 56px;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
+  position: absolute;
+  z-index: 3;
+  padding: 1rem 3.5rem;
+
   justify-content: space-between;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
+
   align-items: center;
-  border-top: 1px solid #e2e3e7;
+  border-top: 1px solid black;
 }
+/* form */
 .form {
   grid-column-start: 3;
-  -ms-grid-column-span: 1;
   grid-column-end: 4;
-  -ms-grid-row: 1;
   grid-row-start: 1;
-  -ms-grid-row-span: 1;
   grid-row-end: 2;
+}
+
+/* aside */
+body aside ul {
+  display: block;
+  width: fit-content;
+}
+body aside ul li {
+  margin-bottom: 1.3rem;
+  list-style-type: none;
+}
+body aside ul li a {
+  color: grey;
+}
+body aside ul #line {
+  text-orientation: mixed;
+  writing-mode: vertical-rl;
+  padding-left: 0.187rem;
+}
+body aside {
+  display: block;
+  position: fixed;
+  top: 22rem;
 }
