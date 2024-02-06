@@ -64,7 +64,7 @@ h6 {
 * {
   font-family: Inconsolata, monospace;
   /* color: #000026; */
-  /* border: purple 1px solid; */
+  border: purple 1px solid;
 }
 
 * {
@@ -96,17 +96,26 @@ nav {
 .box-nav {
   width: 35%;
   display: flex;
+  align-items: center;
   justify-content: space-around;
 }
 .box-nav li {
   display: inline-block;
+  overflow: hidden;
+  height: 2rem;
 }
 .navi {
-  padding: 0.6rem;
+  padding: 0.18rem;
   margin: auto;
   text-decoration: none;
   display: block;
 }
+.navi:hover {
+  transform: translate3d(12px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+}
+
 /* section home */
 section#home {
   display: flex;
@@ -130,7 +139,7 @@ div.fly-sheet {
 }
 .trans {
   background-color: grey;
-  transform: translateY(-30rem); /* Geser elemen ke bawah sejauh 50px */
+  transform: translateY(-50rem); /* Geser elemen ke bawah sejauh 50px */
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 body article section div.fly-sheet div.trans.active {
@@ -143,7 +152,7 @@ body article section div.fly-sheet div.trans.active {
   display: block;
   height: 100%;
   width: 17%;
-  opacity: 20%;
+  opacity: 80%;
   border: grey solid 0.06rem;
 }
 .trans1 {
@@ -239,12 +248,11 @@ div.about {
 }
 
 /* section contact*/
-section#contact {
-}
+
 section#contact div.container {
+  padding-top: 15%;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 10%;
   width: 90%;
 }
 .contact-grid {
@@ -307,14 +315,13 @@ textarea {
 }
 /* footer */
 footer {
-  position: absolute;
-  z-index: 3;
+  z-index: 9;
   padding: 1rem 3.5rem;
 
   justify-content: space-between;
 
   align-items: center;
-  border-top: 1px solid black;
+  border-top: 1px solid grey;
 }
 /* form */
 .form {
@@ -345,4 +352,5 @@ body aside {
   display: block;
   position: fixed;
   top: 22rem;
+  left: 1rem;
 }
