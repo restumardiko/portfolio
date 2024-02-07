@@ -64,7 +64,7 @@ h6 {
 * {
   font-family: Inconsolata, monospace;
   /* color: #000026; */
-  border: purple 1px solid;
+  /* border: purple 1px solid; */
 }
 
 * {
@@ -110,9 +110,10 @@ nav {
   text-decoration: none;
   display: block;
   transition: 0.2s ease-in-out;
+  color: red;
 }
 .navi:hover {
-  transform: translate3d(0px, -45%, 0px) scale3d(1, 1, 1) rotateX(0deg)
+  transform: translate3d(0px, -50%, 0px) scale3d(1, 1, 1) rotateX(0deg)
     rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
   transform-style: preserve-3d;
   transition: 0.2s ease-in-out;
@@ -139,14 +140,35 @@ div.fly-sheet {
   justify-content: right;
   box-sizing: border-box;
 }
-.trans {
-  background-color: grey;
-  transform: translateY(-50rem); /* Geser elemen ke bawah sejauh 50px */
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
-body article section div.fly-sheet div.trans.active {
+.trans.active {
   opacity: 0.5;
   transform: translateY(0);
+  transition-delay: 0ms;
+}
+.trans1.active {
+  opacity: 0.5;
+  transform: translateY(0);
+  transition-delay: 500ms;
+}
+.trans2.active {
+  opacity: 0.5;
+  transform: translateY(0);
+  transition-delay: 900ms;
+}
+.trans3.active {
+  opacity: 0.5;
+  transform: translateY(0);
+  transition-delay: 1300ms;
+}
+.trans4.active {
+  opacity: 0.5;
+  transform: translateY(0);
+  transition-delay: 1700ms;
+}
+.trans5.active {
+  opacity: 0.5;
+  transform: translateY(0);
+  transition-delay: 2000ms;
 }
 
 .brick {
@@ -156,6 +178,11 @@ body article section div.fly-sheet div.trans.active {
   width: 17%;
   opacity: 80%;
   border: grey solid 0.06rem;
+  transform: translateY(-50rem); /* Geser elemen ke bawah sejauh 50px */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+.trans {
+  background-color: grey;
 }
 .trans1 {
   background-color: purple;
