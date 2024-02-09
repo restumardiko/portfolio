@@ -92,6 +92,12 @@ nav {
   border-color: #e2e3e7;
   border-style: solid;
   position: relative;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transition-delay: 200ms;
+  opacity: 0;
+}
+nav.active {
+  opacity: 1;
 }
 .box-nav {
   width: 35%;
@@ -110,7 +116,7 @@ nav {
   text-decoration: none;
   display: block;
   transition: 0.2s ease-in-out;
-  color: red;
+  color: black;
 }
 .navi:hover {
   transform: translate3d(0px, -50%, 0px) scale3d(1, 1, 1) rotateX(0deg)
@@ -130,6 +136,12 @@ section#home {
   flex-direction: column;
   justify-content: center;
   width: 50%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transition-delay: 1500ms;
+}
+#content-container.active {
+  opacity: 1;
 }
 div.fly-sheet {
   background-color: none;
@@ -140,64 +152,67 @@ div.fly-sheet {
   justify-content: right;
   box-sizing: border-box;
 }
-.trans.active {
+.trans5.active {
   opacity: 0.5;
   transform: translateY(0);
   transition-delay: 0ms;
 }
-.trans1.active {
-  opacity: 0.5;
-  transform: translateY(0);
-  transition-delay: 500ms;
-}
-.trans2.active {
-  opacity: 0.5;
-  transform: translateY(0);
-  transition-delay: 900ms;
-}
-.trans3.active {
-  opacity: 0.5;
-  transform: translateY(0);
-  transition-delay: 1300ms;
-}
 .trans4.active {
   opacity: 0.5;
   transform: translateY(0);
-  transition-delay: 1700ms;
+  transition-delay: 200ms;
 }
-.trans5.active {
-  opacity: 0.5;
+.trans3.active {
+  opacity: 0.8;
   transform: translateY(0);
-  transition-delay: 2000ms;
+  transition-delay: 400ms;
+}
+.trans2.active {
+  opacity: 0.8;
+  transform: translateY(0);
+  transition-delay: 600ms;
+}
+.trans1.active {
+  opacity: 0.8;
+  transform: translateY(0);
+  transition-delay: 800ms;
+}
+.trans.active {
+  opacity: 0.8;
+  transform: translateY(0);
+  transition-delay: 1000ms;
 }
 
 .brick {
   position: relative;
   display: block;
   height: 100%;
-  width: 17%;
-  opacity: 80%;
+  width: 25%;
+  opacity: 5%;
   border: grey solid 0.06rem;
   transform: translateY(-50rem); /* Geser elemen ke bawah sejauh 50px */
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 .trans {
-  background-color: grey;
+  background-color: #7f27ff;
+  height: 60%;
 }
 .trans1 {
-  background-color: purple;
-}
-.trans5 {
-  background-color: orange;
+  background-color: #9f70fd;
+  height: 80%;
 }
 .trans2 {
-  background-color: green;
+  background-color: #fdbf60;
+  height: 50%;
 }
 .trans3 {
-  background-color: blue;
+  background-color: #ff8911;
 }
 .trans4 {
   background-color: red;
+}
+.trans5 {
+  background-color: orange;
 }
 
 body {
@@ -382,4 +397,10 @@ body aside {
   position: fixed;
   top: 22rem;
   left: 1rem;
+  transform: translateY(-50rem); /* Geser elemen ke bawah sejauh 50px */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+body aside.active {
+  transform: translateY(0);
+  transition-delay: 2s;
 }
