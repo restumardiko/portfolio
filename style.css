@@ -71,6 +71,7 @@ h6 {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* border: 1px solid; */
 }
 section {
   position: static;
@@ -81,7 +82,7 @@ nav {
   display: flex;
   position: absolute;
   z-index: 1;
-  justify-content: end;
+  justify-content: space-between;
   background-color: white;
   height: 3rem;
   width: 100%;
@@ -99,6 +100,18 @@ nav {
 nav.active {
   opacity: 1;
 }
+/* togle button */
+div.toggle-container {
+  display: flex;
+  width: 4rem;
+  height: auto;
+  /* border: 1px solid #000026; */
+  margin-left: 4rem;
+}
+button {
+  margin: auto;
+}
+
 .box-nav {
   width: 35%;
   display: flex;
@@ -108,10 +121,12 @@ nav.active {
 .box-nav li {
   display: inline-block;
   overflow: hidden;
-  height: 2rem;
+  height: 1.6rem;
 }
+
 .navi {
-  padding: 0.18rem;
+  padding: 0.12rem;
+  line-height: 1.4em;
   margin: auto;
   text-decoration: none;
   display: block;
@@ -220,21 +235,24 @@ body {
   background-color: white;
 }
 h1 {
-  color: red;
+  color: #7f27ff;
   font-weight: bold;
   font-size: 3.5rem;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   margin-top: 0;
   margin-bottom: 0;
 }
+p {
+  color: #ff8911;
+}
 
 .skill {
-  color: grey;
+  color: #ff8911;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
 span {
-  color: grey;
+  color: #9f70fd;
   font-size: 2rem;
   margin-top: 0;
 }
@@ -256,6 +274,9 @@ section div article header p {
 div.about {
   padding: 3rem 8rem;
 }
+#about {
+  background-color: grey;
+}
 .about-container {
   max-width: 80%;
   margin-right: auto;
@@ -266,6 +287,7 @@ div.about {
   column-count: 2;
   column-gap: 3rem;
   column-rule-width: 0px;
+  color: #e2e3e7;
 }
 
 .section-title-wrapper {
@@ -300,7 +322,6 @@ section#contact div.container {
   width: 90%;
 }
 .contact-grid {
-  margin-top: ;
   position: relative;
   z-index: 1;
   display: grid;
@@ -402,5 +423,5 @@ body aside {
 }
 body aside.active {
   transform: translateY(0);
-  transition-delay: 2s;
+  transition-delay: 1s;
 }
