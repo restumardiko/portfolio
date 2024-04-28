@@ -78,21 +78,30 @@ section {
   height: 42rem;
 }
 /* navigation */
+
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+
+  /* transition: ease-in-out 0.1s; */
+}
+
 nav {
   display: flex;
-  position: absolute;
-  z-index: 1;
   justify-content: space-between;
   background-color: white;
   height: 3rem;
   width: 100%;
-  top: 0;
-  left: 0;
+  /* top: -56px; */
+  /* left: 0; */
   border: 0;
   border-bottom: 1px;
   border-color: #e2e3e7;
   border-style: solid;
-  position: relative;
+  /* position: sticky; */
+
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
   transition-delay: 200ms;
   opacity: 0;
@@ -206,7 +215,7 @@ div.fly-sheet {
   width: 25%;
   opacity: 5%;
   border: grey solid 0.06rem;
-  transform: translateY(-50rem); /* Geser elemen ke bawah sejauh 50px */
+  transform: translateY(-50rem); /* Geser elemen ke atas sejauh 50px */
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 .trans {
