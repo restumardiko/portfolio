@@ -7,11 +7,13 @@ document.addEventListener("DOMContentLoaded", function () {
   contenContainer.classList.add('active')
   aside.classList.add('active');
 
+  var slideElementsArray = Array.from(slideElement); // atau [...slideElement]
 
+  console.log(slideElementsArray);
+  slideElementsArray.forEach(function(element) {
+    element.classList.add('active'); })     
       
-      console.log(slideElement);
-      for (var i = 0; i < 6; i++) {
-        slideElement[i].classList.add('active');}
+  
     });
 
 
@@ -35,7 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
      
         
         // Scroll down
-        console.log(a)
         navbar.style.transform = `translateY(${a}px)`;
 
        
@@ -52,7 +53,6 @@ document.addEventListener("DOMContentLoaded", function () {
         // Scroll up
 
     
-        console.log(a);
         navbar.style.transform = `translateY(${a}px)`;
 
 
@@ -60,3 +60,9 @@ document.addEventListener("DOMContentLoaded", function () {
       
       lastScrollTop = currentScroll;
     });
+const button = document.querySelector("button")
+button.onclick=function(){
+  console.log("i easily forget what i've learnt ")
+  button.classList.toggle("on")
+  nav.classList.toggle("on")
+}
