@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   contenContainer.classList.add('active')
   aside.classList.add('active');
 
-  var slideElementsArray = Array.from(slideElement); // atau [...slideElement]
+  var slideElementsArray = Array.from(slideElement); 
 
   console.log(slideElementsArray);
   slideElementsArray.forEach(function(element) {
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (a<=-50){
           a=a-0;
         }else {
-          a=a-5;
+          a=a-6;
         }
    
      
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         }
         else {
-          a=a+5
+          a=a+6
 
         }
         // Scroll up
@@ -60,9 +60,43 @@ document.addEventListener("DOMContentLoaded", function () {
       
       lastScrollTop = currentScroll;
     });
+
+    //theme
+
+const lightIcon = document.getElementById("light-icon");
+const darkIcon = document.getElementById("dark-icon")
 const button = document.querySelector("button")
-button.onclick=function(){
-  console.log("i easily forget what i've learnt ")
-  button.classList.toggle("on")
-  nav.classList.toggle("on")
-}
+const body = document.querySelector('body')
+
+
+
+
+
+
+
+const toggleDarkMode = function(event) {
+  event.preventDefault()
+  let storageTheme = localStorage.getItem("theme")
+  let cek = body.getAttribute("theme");
+
+  if (cek === "light" ) {
+   
+    // Ubah ke mode gelap
+    
+    body.setAttribute("theme", "dark");
+    body.setAttribute("class","dark");
+    localStorage.setItem("theme","dark")
+    lightIcon.style.display = "none";
+    darkIcon.style.display = "block";
+    
+  } else if (cek === "dark") {
+    // Ubah ke mode terang
+    localStorage.setItem("theme","light")
+    body.setAttribute("theme", "light");
+    body.setAttribute("class", "light");
+    lightIcon.style.display = "block";
+    darkIcon.style.display = "none";
+  }
+};
+
+button.addEventListener("click",toggleDarkMode)

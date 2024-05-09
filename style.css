@@ -74,7 +74,7 @@ h6 {
   /* border: 1px solid; */
 }
 .on {
-  background-color: #000026;
+  background-color: pink;
 }
 html {
   scroll-behavior: smooth;
@@ -89,7 +89,7 @@ section {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 1000;
 
   /* transition: ease-in-out 0.1s; */
 }
@@ -97,7 +97,7 @@ section {
 nav {
   display: flex;
   justify-content: space-between;
-  background-color: orange;
+  background-color: var(--navColor);
   height: 3rem;
   width: 100%;
   /* top: -56px; */
@@ -118,16 +118,20 @@ nav.active {
 /* togle button */
 div.toggle-container {
   display: flex;
-  width: 4rem;
-  height: auto;
+
   /* border: 1px solid #000026; */
   margin-left: 4rem;
-  border-radius: 1rem;
 }
 button {
+  all: unset;
   margin: auto;
+  cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+  overflow: hidden;
 }
-
+button.on {
+}
 .box-nav {
   width: 35%;
   display: flex;
@@ -247,8 +251,10 @@ div.fly-sheet {
 }
 
 body {
+  --navColor: white;
+
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  background-color: white;
+  background-color: var(--navColor);
 }
 h1 {
   color: #7f27ff;
@@ -337,7 +343,7 @@ div.about {
 #contact {
   position: relative;
   z-index: 100;
-  background-color: white;
+  background-color: var(--navColor);
 }
 
 section#contact div.container {
@@ -375,7 +381,7 @@ section#contact div.container {
   border-radius: 0px;
   background-color: transparent;
 }
-:focus {
+.form :focus {
   border-bottom-color: red;
 }
 .text-field-spacer {
@@ -410,14 +416,30 @@ textarea {
 /* footer */
 footer {
   position: relative;
+  display: flex;
+  justify-content: space-between;
   z-index: 9;
   padding: 1rem 3.5rem;
   background-color: grey;
+  /* height: 8rem; */
 
   justify-content: space-between;
 
   align-items: center;
-  border-top: 2px solid black;
+  border-top: 1px solid darkorange;
+}
+.link a,
+.footer-text {
+  color: white;
+}
+.link ul li {
+  list-style: none;
+  display: inline;
+  margin: 0.5rem;
+}
+footer .footer-text,
+.link {
+  display: inline-block;
 }
 /* form */
 .form {
@@ -436,8 +458,10 @@ body aside ul li {
   margin-bottom: 1.3rem;
   list-style-type: none;
 }
-body aside ul li a {
-  color: red;
+body aside ul li a,
+#line {
+  color: orange;
+  opacity: 0.5;
 }
 body aside ul #line {
   text-orientation: mixed;
@@ -458,3 +482,14 @@ body aside.active {
   transform: translateY(0);
   transition-delay: 1s;
 }
+
+body.dark {
+  --navColor: navy;
+}
+/* 
+@media screen and (prefers-color-scheme: dark) {
+  body {
+    --bg-color: black;
+    --text-color: white;
+  }
+} */

@@ -9,11 +9,46 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
   </head>
-  <body>
+  <body theme="light">
     <header id="navbar">
         <nav>
           <div class="toggle-container">
-            <button>press</button>
+            <button onclick="toggleDarkMode()">
+              <div class="svg-container">
+              <svg width="30" height="30" id="light-icon">
+                <circle cx="15" cy="15" r="6" fill="currentColor" />
+        
+                <line
+                  id="ray"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  x1="15"
+                  y1="1"
+                  x2="15"
+                  y2="4"
+                ></line>
+        
+                <use href="#ray" transform="rotate(45 15 15)" />
+                <use href="#ray" transform="rotate(90 15 15)" />
+                <use href="#ray" transform="rotate(135 15 15)" />
+                <use href="#ray" transform="rotate(180 15 15)" />
+                <use href="#ray" transform="rotate(225 15 15)" />
+                <use href="#ray" transform="rotate(270 15 15)" />
+                <use href="#ray" transform="rotate(315 15 15)" />
+              </svg>
+              <svg width="30" height="30" id="dark-icon">
+                <path
+                  fill="currentColor"
+                  d="
+                M 23, 5
+                A 12 12 0 1 0 23, 25
+                A 12 12 0 0 1 23, 5"
+                />
+              </svg>
+            </div>
+            </button>
+         
           </div>
           <ul class="box-nav">
             <li><a class="home navi" href="#home" target="_self">home<br>home</a></li>
@@ -153,7 +188,7 @@
             </div>
           </div>
         </div>
-       </section>
+      </section>
 
 
        <aside>
@@ -185,7 +220,33 @@
     </article>
 
     
-    <footer>BhrerestuBhumi 2024</footer>
+    <footer>
+      <div class="footer-text">BhrerestuBhumi 2024</div>
+      <div class="link"><ul>
+        <li>
+          <a href="https://github.com/restumardiko" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            href="https://instagram.com/etukopi?igshid=NzZlODBkYWE4Ng=="
+            target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </li>
+        <li>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+        </li>
+      </ul></div>
+      
+      </footer>
     <script src="script.js"></script>
   </body>
 </html>
