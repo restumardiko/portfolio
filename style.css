@@ -73,11 +73,37 @@ h6 {
   box-sizing: border-box;
   /* border: 1px solid; */
 }
-.on {
+/* .on {
   background-color: pink;
-}
+} */
 html {
   scroll-behavior: smooth;
+}
+:root {
+  --navbar: white;
+  --navText: blue;
+  --borderColor: grey;
+  --side: orange;
+  --name: #7f27ff;
+  --homeText: #ff8911;
+  --subName: #9f70fd;
+  --firstBrick: var(--name);
+  --secondBrick: var(--subName);
+  --thirdBrick: #fdbf60;
+  --fourthBrick: var(--homeText);
+  --skillList: grey;
+  --homeBg: white;
+  --aboutTitle: var(--name);
+  --aboutCntn: white;
+  --aboutBg: grey;
+  --projectBg: #7f27ff;
+  --contactBg: var(--homeBg);
+  --contactTitle: red;
+  --borderBottomColor: black;
+  --borderBottomColorFocuse: var(--contactTitle);
+  --submitBtn: var(--contactTitle);
+  --footerBg: grey;
+  --footerText: white;
 }
 section {
   position: static;
@@ -95,16 +121,16 @@ section {
 }
 
 nav {
+  background-color: var(--navbar);
   display: flex;
   justify-content: space-between;
-  background-color: var(--navColor);
   height: 3rem;
   width: 100%;
   /* top: -56px; */
   /* left: 0; */
   border: 0;
-  border-bottom: 1px;
-  border-color: #e2e3e7;
+  border-bottom: 0.1px;
+  border-color: lightgrey;
   border-style: solid;
   /* position: sticky; */
 
@@ -143,6 +169,9 @@ button.on {
   overflow: hidden;
   height: 1.6rem;
 }
+.box-nav li a {
+  color: var(--navText);
+}
 
 .navi {
   padding: 0.12rem;
@@ -151,7 +180,6 @@ button.on {
   text-decoration: none;
   display: block;
   transition: 0.2s ease-in-out;
-  color: black;
 }
 .navi:hover {
   transform: translate3d(0px, -50%, 0px) scale3d(1, 1, 1) rotateX(0deg)
@@ -163,6 +191,7 @@ button.on {
 /* section home */
 section#home {
   display: flex;
+  background-color: var(--homeBg);
   flex-direction: row;
   justify-content: right;
 }
@@ -229,35 +258,32 @@ div.fly-sheet {
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 .trans {
-  background-color: #7f27ff;
+  background-color: var(--firstBrick);
   height: 60%;
 }
 .trans1 {
-  background-color: #9f70fd;
+  background-color: var(--secondBrick);
   height: 80%;
 }
 .trans2 {
-  background-color: #fdbf60;
+  background-color: var(--thirdBrick);
   height: 50%;
 }
 .trans3 {
-  background-color: #ff8911;
+  background-color: var(--fourthBrick);
 }
-.trans4 {
+/* .trans4 {
   background-color: red;
 }
 .trans5 {
   background-color: orange;
-}
+} */
 
 body {
-  --navColor: white;
-
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  background-color: var(--navColor);
 }
 h1 {
-  color: #7f27ff;
+  color: var(--name);
   font-weight: bold;
   font-size: 3.5rem;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
@@ -265,16 +291,16 @@ h1 {
   margin-bottom: 0;
 }
 p {
-  color: #ff8911;
+  color: var(--homeText);
 }
 
 .skill {
-  color: #ff8911;
+  color: var(--homeText);
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
 span {
-  color: #9f70fd;
+  color: var(--subName);
   font-size: 2rem;
   margin-top: 0;
 }
@@ -287,17 +313,15 @@ div.brief-intro ul {
 .brief-intro ul li {
   display: inline-block;
   padding: 2%;
-  color: grey;
+  color: var(--skillList);
 }
-section div article header p {
-  color: green;
-}
+
 /*about me section*/
 div.about {
   padding: 3rem 8rem;
 }
 #about {
-  background-color: grey;
+  background-color: var(--aboutBg);
 }
 .about-container {
   max-width: 80%;
@@ -309,7 +333,7 @@ div.about {
   column-count: 2;
   column-gap: 3rem;
   column-rule-width: 0px;
-  color: #e2e3e7;
+  color: var(--aboutCntn);
 }
 
 .section-title-wrapper {
@@ -318,6 +342,7 @@ div.about {
 }
 .section-title {
   display: inline-block;
+  color: var(--aboutTitle);
 
   margin-left: 1.5rem;
   font-size: 2rem;
@@ -328,7 +353,7 @@ div.about {
   width: 8rem;
   height: 0.125rem;
   margin-top: 1.4rem;
-  background-color: grey;
+  background-color: var(--aboutTitle);
 }
 .section-header {
   margin-bottom: 4rem;
@@ -336,14 +361,14 @@ div.about {
 }
 /* project section  */
 #project {
-  background-color: #7f27ff;
+  background-color: var(--projectBg);
 }
 
 /* section contact*/
 #contact {
   position: relative;
   z-index: 100;
-  background-color: var(--navColor);
+  background-color: var(--contactBg);
 }
 
 section#contact div.container {
@@ -365,7 +390,7 @@ section#contact div.container {
   grid-template-rows: auto;
 }
 .contact-title {
-  color: red;
+  color: var(--contactTitle);
   font-size: 2.5rem;
   line-height: 3rem;
 }
@@ -377,12 +402,12 @@ section#contact div.container {
 
   border-style: none none solid;
   border-bottom-width: 0.0625rem;
-  border-bottom-color: #000026;
+  border-bottom-color: var(--borderBottomColor);
   border-radius: 0px;
   background-color: transparent;
 }
 .form :focus {
-  border-bottom-color: red;
+  border-bottom-color: var(--borderBottomColorFocuse);
 }
 .text-field-spacer {
   width: 3rem;
@@ -405,8 +430,8 @@ textarea {
   margin-right: 1rem;
   padding: 0.8rem 2rem;
   border-radius: 0px;
-  background-color: red;
-  color: #fff;
+  background-color: var(--submitBtn);
+  color: var(--homeBg);
   font-size: 1.3rem;
   line-height: 1.5rem;
   letter-spacing: 0.025rem;
@@ -420,17 +445,17 @@ footer {
   justify-content: space-between;
   z-index: 9;
   padding: 1rem 3.5rem;
-  background-color: grey;
+  background-color: var(--footerBg);
   /* height: 8rem; */
 
   justify-content: space-between;
 
   align-items: center;
-  border-top: 1px solid darkorange;
+  border-top: 1px solid var(--borderColor);
 }
 .link a,
 .footer-text {
-  color: white;
+  color: var(--footerText);
 }
 .link ul li {
   list-style: none;
@@ -460,8 +485,8 @@ body aside ul li {
 }
 body aside ul li a,
 #line {
-  color: orange;
-  opacity: 0.5;
+  color: var(--side);
+  opacity: 1;
 }
 body aside ul #line {
   text-orientation: mixed;
@@ -484,8 +509,32 @@ body aside.active {
 }
 
 body.dark {
-  --navColor: navy;
+  --navbar: navy;
+  --navText: lime;
+  --borderColor: grey;
+  --side: lime;
+  --name: #7f27ff;
+  --homeText: #ff8911;
+  --subName: #9f70fd;
+  --firstBrick: var(--name);
+  --secondBrick: var(--subName);
+  --thirdBrick: #fdbf60;
+  --fourthBrick: var(--homeText);
+  --skillList: grey;
+  --homeBg: black;
+  --aboutTitle: var(--name);
+  --aboutCntn: white;
+  --aboutBg: grey;
+  --projectBg: #7f27ff;
+  --contactBg: var(--homeBg);
+  --contactTitle: red;
+  --borderBottomColor: black;
+  --borderBottomColorFocuse: var(--contactTitle);
+  --submitBtn: var(--contactTitle);
+  --footerBg: grey;
+  --footerText: white;
 }
+
 /* 
 @media screen and (prefers-color-scheme: dark) {
   body {

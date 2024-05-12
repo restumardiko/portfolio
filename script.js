@@ -76,7 +76,7 @@ const body = document.querySelector('body')
 
 const toggleDarkMode = function(event) {
   event.preventDefault()
-  let storageTheme = localStorage.getItem("theme")
+  // let storageTheme = localStorage.getItem("theme")
   let cek = body.getAttribute("theme");
 
   if (cek === "light" ) {
@@ -85,13 +85,13 @@ const toggleDarkMode = function(event) {
     
     body.setAttribute("theme", "dark");
     body.setAttribute("class","dark");
-    localStorage.setItem("theme","dark")
+    // localStorage.setItem("theme","dark")
     lightIcon.style.display = "none";
     darkIcon.style.display = "block";
     
   } else if (cek === "dark") {
     // Ubah ke mode terang
-    localStorage.setItem("theme","light")
+    // localStorage.setItem("theme","light")
     body.setAttribute("theme", "light");
     body.setAttribute("class", "light");
     lightIcon.style.display = "block";
