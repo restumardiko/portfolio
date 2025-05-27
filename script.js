@@ -2,6 +2,12 @@ var slideElement = document.getElementsByClassName("brick");
 const nav =document.querySelector('nav');
 const contenContainer =document.getElementById('content-container')
 const aside = document.querySelector('aside')
+// const savedTheme = localStorage.getItem("theme") || "light";
+// // body.setAttribute("theme", savedTheme);
+// // body.setAttribute("class", savedTheme);
+// // lightIcon.style.display = savedTheme === "dark" ? "none" : "block";
+// // darkIcon.style.display = savedTheme === "dark" ? "block" : "none";
+
 document.addEventListener("DOMContentLoaded", function () {
   nav.classList.add('active');
   contenContainer.classList.add('active')
@@ -26,39 +32,13 @@ document.addEventListener("DOMContentLoaded", function () {
       let currentScroll = window.scrollY || document.documentElement.scrollTop;
       
     
-      if (currentScroll > lastScrollTop) {
-        if (a<=-50){
-          a=a-0;
-        }else {
-          a=a-6;
-        }
-   
-     
-     
-        
-        // Scroll down
-        navbar.style.transform = `translateY(${a}px)`;
-
-       
-      
-      } else {
-        if (a>=0){
-          a=0
-
-        }
-        else {
-          a=a+6
-
-        }
-        // Scroll up
-
-    
-        navbar.style.transform = `translateY(${a}px)`;
-
-
-      }
-      
-      lastScrollTop = currentScroll;
+     if (currentScroll > lastScrollTop) {
+  if (a > -50) a -= 6;
+} else {
+  if (a < 0) a += 6;
+}
+navbar.style.transform = `translateY(${a}px)`;
+lastScrollTop = currentScroll;
     });
 
     //theme
@@ -74,8 +54,9 @@ const body = document.querySelector('body')
 
 
 
-const toggleDarkMode = function(event) {
-  event.preventDefault()
+const toggleDarkMode = function(e) {
+  e.preventDefault();
+
   // let storageTheme = localStorage.getItem("theme")
   let cek = body.getAttribute("theme");
 
@@ -98,5 +79,7 @@ const toggleDarkMode = function(event) {
     darkIcon.style.display = "none";
   }
 };
+
+
 
 button.addEventListener("click",toggleDarkMode)

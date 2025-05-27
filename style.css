@@ -1,29 +1,22 @@
-/*
-  1. Use a more-intuitive box-sizing model.
-*/
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-}
-/*
-  2. Remove default margin
-*/
-* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inconsolata, monospace;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  outline: lime solid 1px;
 }
-/*
-  Typographic tweaks!
-  3. Add accessible line-height
-  4. Improve text rendering
-*/
+
 body {
   line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
+  /* -webkit-font-smoothing: antialiased; */
 }
-/*
-  5. Improve media defaults
-*/
+
 img,
 picture,
 video,
@@ -32,60 +25,24 @@ svg {
   display: block;
   max-width: 100%;
 }
-/*
-  6. Remove built-in form typography styles
-*/
+
 input,
 button,
 textarea,
 select {
   font: inherit;
 }
-/*
-  7. Avoid text overflows
-*/
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
-/*
-  8. Create a root stacking context
-*/
-#root,
-#__next {
-  isolation: isolate;
-}
 
-* {
-  font-family: Inconsolata, monospace;
-  /* color: #000026; */
-  /* border: purple 1px solid; */
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  /* border: 1px solid; */
-}
-/* .on {
-  background-color: pink;
-} */
 html {
   scroll-behavior: smooth;
 }
 :root {
-  --navbar: white;
-  --navText: blue;
+  --navbar: #7f27ff;
+  --navText: white;
   --borderColor: grey;
-  --side: orange;
-  --name: #7f27ff;
-  --homeText: #ff8911;
+  --side: grey;
+  --name: red;
+  --homeText: #3d405b;
   --subName: #9f70fd;
   --firstBrick: var(--name);
   --secondBrick: var(--subName);
@@ -93,7 +50,7 @@ html {
   --fourthBrick: var(--homeText);
   --skillList: grey;
   --homeBg: white;
-  --aboutTitle: var(--name);
+  --aboutTitle: white;
   --aboutCntn: white;
   --aboutBg: grey;
   --projectBg: #7f27ff;
@@ -102,22 +59,20 @@ html {
   --borderBottomColor: black;
   --borderBottomColorFocuse: var(--contactTitle);
   --submitBtn: var(--contactTitle);
-  --footerBg: grey;
+  --footerBg: white;
   --footerText: white;
 }
 section {
   position: static;
-  height: 42rem;
+  min-height: 100vh;
 }
-/* navigation */
+/* ===========navigation====== */
 
 #navbar {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
-
-  /* transition: ease-in-out 0.1s; */
 }
 
 nav {
@@ -126,13 +81,11 @@ nav {
   justify-content: space-between;
   height: 3rem;
   width: 100%;
-  /* top: -56px; */
-  /* left: 0; */
+
   border: 0;
   border-bottom: 0.1px;
-  border-color: lightgrey;
+  border-color: white;
   border-style: solid;
-  /* position: sticky; */
 
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
   transition-delay: 200ms;
@@ -141,11 +94,10 @@ nav {
 nav.active {
   opacity: 1;
 }
-/* togle button */
+/* ========togle button ==========*/
 div.toggle-container {
   display: flex;
 
-  /* border: 1px solid #000026; */
   margin-left: 4rem;
 }
 button {
@@ -156,8 +108,7 @@ button {
   width: 2rem;
   overflow: hidden;
 }
-button.on {
-}
+
 .box-nav {
   width: 35%;
   display: flex;
@@ -188,7 +139,7 @@ button.on {
   transition: 0.2s ease-in-out;
 }
 
-/* section home */
+/* ===== home========= */
 section#home {
   display: flex;
   background-color: var(--homeBg);
@@ -212,81 +163,21 @@ div.fly-sheet {
   width: 40%;
   height: auto;
   display: flex;
-  position: relative;
-  justify-content: right;
-  box-sizing: border-box;
+
+  justify-content: center;
+  align-items: center;
 }
-.trans5.active {
-  opacity: 0.5;
-  transform: translateY(0);
-  transition-delay: 0ms;
-}
-.trans4.active {
-  opacity: 0.5;
-  transform: translateY(0);
-  transition-delay: 200ms;
-}
-.trans3.active {
-  opacity: 0.8;
-  transform: translateY(0);
-  transition-delay: 400ms;
-}
-.trans2.active {
-  opacity: 0.8;
-  transform: translateY(0);
-  transition-delay: 600ms;
-}
-.trans1.active {
-  opacity: 0.8;
-  transform: translateY(0);
-  transition-delay: 800ms;
-}
-.trans.active {
-  opacity: 0.8;
-  transform: translateY(0);
-  transition-delay: 1000ms;
+img {
+  border-radius: 10rem;
+  height: 15rem;
+  width: 15rem;
 }
 
-.brick {
-  position: relative;
-  display: block;
-  height: 100%;
-  width: 25%;
-  opacity: 5%;
-  border: grey solid 0.06rem;
-  transform: translateY(-50rem); /* Geser elemen ke atas sejauh 50px */
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
-.trans {
-  background-color: var(--firstBrick);
-  height: 60%;
-}
-.trans1 {
-  background-color: var(--secondBrick);
-  height: 80%;
-}
-.trans2 {
-  background-color: var(--thirdBrick);
-  height: 50%;
-}
-.trans3 {
-  background-color: var(--fourthBrick);
-}
-/* .trans4 {
-  background-color: red;
-}
-.trans5 {
-  background-color: orange;
-} */
-
-body {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-}
 h1 {
   color: var(--name);
   font-weight: bold;
   font-size: 3.5rem;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -296,8 +187,7 @@ p {
 
 .skill {
   color: var(--homeText);
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding: 1rem 0;
 }
 span {
   color: var(--subName);
@@ -314,6 +204,14 @@ div.brief-intro ul {
   display: inline-block;
   padding: 2%;
   color: var(--skillList);
+}
+.icon {
+  display: flex;
+  flex-direction: row;
+}
+.icon div img {
+  border-radius: 0;
+  width: 1rem;
 }
 
 /*about me section*/
@@ -359,12 +257,48 @@ div.about {
   margin-bottom: 4rem;
   margin-top: 4rem;
 }
-/* project section  */
+/* =========project section========  */
 #project {
   background-color: var(--projectBg);
 }
+/*======tech stack========*/
+.tech-stack-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.tech-stack-container .html {
+  width: 2rem;
+  height: 2rem;
+  color: #e34f26;
+}
+.react {
+  width: 2rem;
+  height: 2rem;
+  color: #61dafb;
+}
+.tailwind {
+  width: 2rem;
+  height: 2rem;
+  color: #06b6d4;
+}
+.nodeJs {
+  width: 2rem;
+  height: 2rem;
+  color: #5fa04e;
+}
+.css {
+  width: 2rem;
+  height: 2rem;
+  color: #1572b6;
+}
+.next {
+  width: 2rem;
+  height: 2rem;
+  color: #000000;
+}
 
-/* section contact*/
+/* ============section contact===========*/
 #contact {
   position: relative;
   z-index: 100;
@@ -440,33 +374,30 @@ textarea {
 }
 /* footer */
 footer {
+  font-family: "Times New Roman", Times, serif;
   position: relative;
+  z-index: 90;
   display: flex;
-  justify-content: space-between;
-  z-index: 9;
-  padding: 1rem 3.5rem;
+  flex-direction: row;
+
   background-color: var(--footerBg);
-  /* height: 8rem; */
+  height: auto;
+  justify-content: end;
+  padding: 1rem;
 
-  justify-content: space-between;
-
-  align-items: center;
   border-top: 1px solid var(--borderColor);
 }
-.link a,
-.footer-text {
-  color: var(--footerText);
-}
-.link ul li {
+footer ul {
+  display: flex;
+  flex-direction: row;
   list-style: none;
-  display: inline;
-  margin: 0.5rem;
+  justify-content: space-between;
+  width: 12rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
-footer .footer-text,
-.link {
-  display: inline-block;
-}
-/* form */
+
+/* ======form=========== */
 .form {
   grid-column-start: 3;
   grid-column-end: 4;
@@ -474,7 +405,7 @@ footer .footer-text,
   grid-row-end: 2;
 }
 
-/* aside */
+/* =======aside======= */
 body aside ul {
   display: block;
   width: fit-content;
@@ -483,22 +414,26 @@ body aside ul li {
   margin-bottom: 1.3rem;
   list-style-type: none;
 }
-body aside ul li a,
-#line {
+li a {
   color: var(--side);
-  opacity: 1;
 }
-body aside ul #line {
-  text-orientation: mixed;
-  writing-mode: vertical-rl;
-  padding-left: 0.187rem;
+.line-container {
+  display: flex;
+  justify-content: center;
 }
+.line {
+  width: 0.1rem;
+  height: 4rem;
+  background-color: var(--side);
+  opacity: 0.7;
+}
+
 body aside {
   display: block;
   position: fixed;
   top: 22rem;
   left: 1rem;
-  transform: translateY(-50rem); /* Geser elemen ke bawah sejauh 50px */
+  transform: translateY(-50rem);
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
   z-index: 1;
 }
@@ -533,6 +468,9 @@ body.dark {
   --submitBtn: var(--contactTitle);
   --footerBg: grey;
   --footerText: white;
+}
+#light-icon {
+  color: white;
 }
 
 /* 
