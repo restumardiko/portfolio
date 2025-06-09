@@ -98,7 +98,7 @@ nav.active {
 div.toggle-container {
   display: flex;
 
-  margin-left: 4rem;
+  margin-left: 8%;
 }
 button {
   all: unset;
@@ -110,7 +110,7 @@ button {
 }
 
 .box-nav {
-  width: 35%;
+  width: 20rem;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -161,7 +161,7 @@ button {
 div.fly-sheet {
   background-color: none;
   width: 40%;
-  height: auto;
+
   display: flex;
 
   justify-content: center;
@@ -174,7 +174,7 @@ div.fly-sheet {
   overflow: hidden;
 }
 img {
-  height: 40rem;
+  height: auto;
 }
 
 h1 {
@@ -322,27 +322,37 @@ div.about {
   display: flex;
   flex-direction: row;
   height: 30rem;
-  max-width: 90%;
+  max-width: 85%;
   margin-right: auto;
   margin-left: auto;
   gap: 2rem;
 }
 .project-container div {
   background-color: gray;
-  flex-grow: 1;
+
   width: 20rem;
-  height: full;
+  min-height: 10rem;
 }
 
 /* ============section contact===========*/
+#contact .section-title-line {
+  background-color: var(--contactTitle);
+}
+#contact .section-title {
+  color: var(--contactTitle);
+  font-weight: bold;
+}
 #contact {
+  padding-top: 2rem;
   position: relative;
   z-index: 100;
   background-color: var(--contactBg);
 }
+#contact .section-title-wrapper {
+  margin-top: 0;
+}
 
 section#contact div.container {
-  padding-top: 15%;
   margin-right: auto;
   margin-left: auto;
   width: 90%;
@@ -351,6 +361,7 @@ section#contact div.container {
   position: relative;
   z-index: 1;
   display: grid;
+  margin-top: 6rem;
 
   align-items: center;
   grid-auto-columns: 1fr;
@@ -361,9 +372,10 @@ section#contact div.container {
 }
 .contact-title {
   color: var(--contactTitle);
-  font-size: 2.5rem;
+  font-size: 2rem;
   line-height: 3rem;
   text-align: start;
+  padding: 2rem;
 }
 .text-field {
   width: 100%;
@@ -377,6 +389,7 @@ section#contact div.container {
   border-radius: 0px;
   background-color: transparent;
 }
+
 .form :focus {
   border-bottom-color: var(--borderBottomColorFocuse);
 }
@@ -538,30 +551,91 @@ body.dark {
   .project-container {
     display: flex;
     flex-direction: column;
-    height: 30rem;
-    max-width: 90%;
+    height: 40rem;
+    max-width: 80%;
     margin-right: auto;
     margin-left: auto;
     gap: 2rem;
   }
-  .box-nav {
-    width: 42%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin-right: 1rem;
-  }
+
   .contact-title {
     color: var(--contactTitle);
     font-size: 1.5rem;
     line-height: 2rem;
     text-align: start;
   }
+  input {
+    font-size: 0.8rem;
+  }
+
   .contact-grid {
     position: relative;
     z-index: 1;
     display: flex;
     align-items: center;
     flex-direction: column;
+  }
+  h1 {
+    color: var(--name);
+    font-weight: normal;
+    font-size: 1.5rem;
+    line-height: normal;
+  }
+  p {
+    font-size: small;
+  }
+  a {
+    font-size: small;
+  }
+  .box-nav li {
+    height: 1.5rem;
+  }
+
+  body aside {
+    left: 0.5rem;
+  }
+  .image-container {
+    /* border-radius: 10rem; */
+    height: 13rem;
+    width: 13rem;
+    overflow: hidden;
+  }
+  i svg {
+    width: 1.3rem;
+  }
+  .project-container div {
+    width: 25rem;
+    min-height: 10rem;
+  }
+  .section-title {
+    display: inline-block;
+    color: var(--aboutTitle);
+
+    margin-left: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+  .section-title-line {
+    position: static;
+    width: 4rem;
+    height: 0.125rem;
+    margin-top: 1.4rem;
+    background-color: var(--aboutTitle);
+  }
+}
+@media (max-width: 500px) {
+  .image-container {
+    height: 9rem;
+    width: 9rem;
+  }
+  i svg {
+    width: 1rem;
+  }
+  .project-container div {
+    width: 18rem;
+    min-height: 10rem;
+  }
+  .contact-title {
+    padding: 0;
   }
 }
