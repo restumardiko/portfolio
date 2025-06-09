@@ -2,11 +2,6 @@ var slideElement = document.getElementsByClassName("brick");
 const nav = document.querySelector("nav");
 const contenContainer = document.getElementById("content-container");
 const aside = document.querySelector("aside");
-// const savedTheme = localStorage.getItem("theme") || "light";
-// // body.setAttribute("theme", savedTheme);
-// // body.setAttribute("class", savedTheme);
-// // lightIcon.style.display = savedTheme === "dark" ? "none" : "block";
-// // darkIcon.style.display = savedTheme === "dark" ? "block" : "none";
 
 document.addEventListener("DOMContentLoaded", function () {
   nav.classList.add("active");
@@ -46,13 +41,13 @@ const body = document.querySelector("body");
 
 const toggleDarkMode = function (e) {
   e.preventDefault();
+  console.log(e);
+  console.log("anjing");
 
   // let storageTheme = localStorage.getItem("theme")
   let cek = body.getAttribute("theme");
 
   if (cek === "light") {
-    // Ubah ke mode gelap
-
     body.setAttribute("theme", "dark");
     body.setAttribute("class", "dark");
     // localStorage.setItem("theme","dark")

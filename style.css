@@ -40,7 +40,7 @@ html {
   --navbar: #7f27ff;
   --navText: white;
   --borderColor: grey;
-  --side: grey;
+  --side: lightgreen;
   --name: red;
   --homeText: #3d405b;
   --subName: #9f70fd;
@@ -446,6 +446,9 @@ footer ul {
   margin-left: 2rem;
   margin-right: 2rem;
 }
+footer li a {
+  color: gray;
+}
 
 /* ======form=========== */
 .form {
@@ -501,15 +504,12 @@ body.dark {
   --name: #7f27ff;
   --homeText: #ff8911;
   --subName: #9f70fd;
-  --firstBrick: var(--name);
-  --secondBrick: var(--subName);
-  --thirdBrick: #fdbf60;
-  --fourthBrick: var(--homeText);
+
   --skillList: grey;
   --homeBg: black;
   --aboutTitle: var(--name);
   --aboutCntn: white;
-  --aboutBg: grey;
+  --aboutBg: black;
   --projectBg: #7f27ff;
   --contactBg: var(--homeBg);
   --contactTitle: red;
@@ -637,5 +637,8 @@ body.dark {
   }
   .contact-title {
     padding: 0;
+  }
+  .footer-text p {
+    font-size: x-small;
   }
 }
