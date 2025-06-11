@@ -9,7 +9,7 @@
   padding: 0;
   box-sizing: border-box;
 
-  outline: lime solid 1px;
+  /* outline: lime solid 1px; */
 }
 
 body {
@@ -56,11 +56,13 @@ html {
   --projectBg: #7f27ff;
   --contactBg: var(--homeBg);
   --contactTitle: red;
+  --contactText: red;
   --borderBottomColor: black;
   --borderBottomColorFocuse: var(--contactTitle);
   --submitBtn: var(--contactTitle);
   --footerBg: white;
   --footerText: white;
+  --textfield: var(var(--borderBottomColor));
 }
 section {
   position: static;
@@ -191,7 +193,7 @@ p {
 }
 
 .skill {
-  color: var(--homeText);
+  color: var(--navText);
   padding: 1rem 0;
 }
 span {
@@ -371,7 +373,7 @@ section#contact div.container {
   grid-template-rows: auto;
 }
 .contact-title {
-  color: var(--contactTitle);
+  color: var(--contactText);
   font-size: 2rem;
   line-height: 3rem;
   text-align: start;
@@ -388,6 +390,7 @@ section#contact div.container {
   border-bottom-color: var(--borderBottomColor);
   border-radius: 0px;
   background-color: transparent;
+  color: var(--textfield);
 }
 
 .form :focus {
@@ -447,7 +450,7 @@ footer ul {
   margin-right: 2rem;
 }
 footer li a {
-  color: gray;
+  color: var(--footerText);
 }
 
 /* ======form=========== */
@@ -497,38 +500,40 @@ body aside.active {
 }
 
 body.dark {
-  --navbar: navy;
-  --navText: lime;
+  --navbar: var(--aboutBg);
+  --navText: lightgray;
   --borderColor: grey;
-  --side: lime;
-  --name: #7f27ff;
-  --homeText: #ff8911;
-  --subName: #9f70fd;
+  --side: orange;
+  --name: gray;
+  --homeText: darkgray;
+  --subName: orange;
 
   --skillList: grey;
   --homeBg: black;
-  --aboutTitle: var(--name);
-  --aboutCntn: white;
-  --aboutBg: black;
-  --projectBg: #7f27ff;
-  --contactBg: var(--homeBg);
-  --contactTitle: red;
-  --borderBottomColor: black;
-  --borderBottomColorFocuse: var(--contactTitle);
-  --submitBtn: var(--contactTitle);
-  --footerBg: grey;
-  --footerText: white;
+  --aboutTitle: gray;
+  --aboutCntn: gray;
+  --aboutBg: #151d1f;
+  --projectBg: var(--homeBg);
+  --contactBg: var(--aboutBg);
+  --contactTitle: gray;
+  --borderBottomColor: gray;
+  --borderBottomColorFocuse: var(--submitBtn);
+  --submitBtn: orange;
+  --contactText: gray;
+  --footerBg: black;
+  --footerText: orange;
+  --textfield: orange;
 }
 #light-icon {
   color: white;
 }
 
-@media screen and (prefers-color-scheme: dark) {
+/* @media screen and (prefers-color-scheme: dark) {
   body {
     --bg-color: black;
     --text-color: white;
   }
-}
+} */
 @media (max-width: 800px) {
   #home {
     display: flex;
@@ -559,7 +564,6 @@ body.dark {
   }
 
   .contact-title {
-    color: var(--contactTitle);
     font-size: 1.5rem;
     line-height: 2rem;
     text-align: start;
@@ -576,7 +580,6 @@ body.dark {
     flex-direction: column;
   }
   h1 {
-    color: var(--name);
     font-weight: normal;
     font-size: 1.5rem;
     line-height: normal;
@@ -609,7 +612,6 @@ body.dark {
   }
   .section-title {
     display: inline-block;
-    color: var(--aboutTitle);
 
     margin-left: 1.5rem;
     font-size: 1.5rem;
@@ -620,7 +622,6 @@ body.dark {
     width: 4rem;
     height: 0.125rem;
     margin-top: 1.4rem;
-    background-color: var(--aboutTitle);
   }
 }
 @media (max-width: 500px) {
