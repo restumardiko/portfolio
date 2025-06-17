@@ -1,24 +1,35 @@
-var slideElement = document.getElementsByClassName("brick");
 const nav = document.querySelector("nav");
-const contenContainer = document.getElementById("content-container");
+const contentContainer = document.getElementById("content-container");
 const aside = document.querySelector("aside");
 
 document.addEventListener("DOMContentLoaded", function () {
   nav.classList.add("active");
-  contenContainer.classList.add("active");
+  contentContainer.classList.add("active");
   aside.classList.add("active");
-
-  var slideElementsArray = Array.from(slideElement);
-
-  console.log(slideElementsArray);
-  slideElementsArray.forEach(function (element) {
-    element.classList.add("active");
-  });
 });
 
 let lastScrollTop = 0;
 const navbar = document.getElementById("navbar");
 let a = 0;
+
+document.addEventListener("DOMContentLoaded", function () {
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    body.setAttribute("theme", "dark");
+    body.setAttribute("class", "dark");
+    lightIcon.style.display = "none";
+    darkIcon.style.display = "block";
+  } else {
+    body.setAttribute("theme", "light");
+    body.setAttribute("class", "light");
+    lightIcon.style.display = "block";
+    darkIcon.style.display = "none";
+  }
+
+  nav.classList.add("active");
+  contentContainer.classList.add("active");
+  aside.classList.add("active");
+});
 
 window.addEventListener("scroll", () => {
   let currentScroll = window.scrollY || document.documentElement.scrollTop;
@@ -41,21 +52,19 @@ const body = document.querySelector("body");
 
 const toggleDarkMode = function (e) {
   e.preventDefault();
-  console.log(e);
-  console.log("anjing");
 
-  // let storageTheme = localStorage.getItem("theme")
+  //let storageTheme = localStorage.getItem("theme")
   let cek = body.getAttribute("theme");
 
   if (cek === "light") {
     body.setAttribute("theme", "dark");
     body.setAttribute("class", "dark");
-    // localStorage.setItem("theme","dark")
+    localStorage.setItem("theme", "dark");
     lightIcon.style.display = "none";
     darkIcon.style.display = "block";
   } else if (cek === "dark") {
     // Ubah ke mode terang
-    // localStorage.setItem("theme","light")
+    localStorage.setItem("theme", "light");
     body.setAttribute("theme", "light");
     body.setAttribute("class", "light");
     lightIcon.style.display = "block";
