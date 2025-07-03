@@ -187,7 +187,13 @@ This project laid the foundation for my next step: building a fullstack version 
 Drop your message in the form — I’d love to hear from you!
         
             </h3>
-            <form class="form" name="contact" method="POST" data-netlify="true" >
+          
+            <form class="form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" >
+          
+           <input type="hidden" name="form-name" value="contact" />
+
+
+           <input type="text" name="bot-field" style="display: none;" />
               <div class="email-form">
                 <div class="text-field-wrapper">
                   <input
@@ -219,7 +225,7 @@ Drop your message in the form — I’d love to hear from you!
               <textarea 
                 placeholder="Say Hello!"
                 maxlength="5000"
-                id="Message"
+                id="message"
                 name="Message"
                 data-name="Message"
                 class="text-field min-height w-input"
