@@ -9,7 +9,7 @@
   padding: 0;
   box-sizing: border-box;
 
-  outline: lime solid 1px;
+  /* outline: lime solid 1px; */
 }
 
 body {
@@ -87,8 +87,8 @@ nav {
   border-color: white;
   border-style: solid;
 
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-  transition-delay: 200ms;
+  /* transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; */
+  /* transition-delay: 200ms; */
   opacity: 0;
 }
 nav.active {
@@ -130,7 +130,7 @@ button {
   margin: auto;
   text-decoration: none;
   display: block;
-  transition: 0.2s ease-in-out;
+  /* transition: 0.2s ease-in-out; */
 }
 .navi:hover {
   transform: translate3d(0px, -50%, 0px) scale3d(1, 1, 1) rotateX(0deg)
@@ -156,8 +156,8 @@ button {
   justify-content: center;
   width: 50%;
   opacity: 0;
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-  transition-delay: 1500ms;
+  /* transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transition-delay: 1500ms; */
   padding-bottom: 2rem;
 }
 #content-container.active {
@@ -548,13 +548,13 @@ body aside {
   top: 22rem;
   left: 1rem;
   transform: translateY(-50rem);
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transition: transform 0.2s ease-in-out;
   z-index: 1;
 }
 body aside.active {
   z-index: 1;
   transform: translateY(0);
-  transition-delay: 1s;
+  transition-delay: 0.5s;
 }
 
 body.dark {
