@@ -335,6 +335,7 @@ div.about {
   color: #1572b6;
 }
 .next {
+  display: none;
   width: 2rem;
   height: 2rem;
   color: var(--nextLogo);
