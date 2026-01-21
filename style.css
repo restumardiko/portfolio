@@ -11,6 +11,9 @@
 
   /* outline: lime solid 1px; */
 }
+* {
+  outline: #5fa04e 1px solid;
+}
 
 body {
   line-height: 1.5;
@@ -308,6 +311,7 @@ div.about {
   display: flex;
   flex-direction: row;
   gap: 1rem;
+  padding: 0.5rem;
 }
 .tech-stack-container .html {
   width: 2rem;
@@ -335,7 +339,6 @@ div.about {
   color: #1572b6;
 }
 .next {
-  display: none;
   width: 2rem;
   height: 2rem;
   color: var(--nextLogo);
@@ -344,6 +347,16 @@ div.about {
   width: 2rem;
   height: 2rem;
   color: #f7df1e;
+}
+.express {
+  width: 2rem;
+  height: 2rem;
+  color: var(--nextLogo);
+}
+.postgres {
+  width: 2rem;
+  height: 2rem;
+  color: #4169e1;
 }
 /*==========section project =========*/
 section#project {
@@ -388,7 +401,8 @@ section#project {
   color: var(--aboutTitle);
   /* border-bottom: white solid 1px; */
 }
-.project-container .project-card2 {
+.project-container .project-card2,
+.project-container .project-card4 {
   /* background-color: gray; */
   display: flex;
   flex-direction: row;
@@ -733,7 +747,8 @@ body.dark {
     flex-direction: column;
     height: auto;
   }
-  .project-container .project-card2 {
+  .project-container .project-card2,
+  .project-container .project-card4 {
     flex-direction: column;
     height: 58%;
   }
