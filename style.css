@@ -424,16 +424,43 @@ section#project {
 .mobile {
   width: 16%;
   height: fit-content;
-  border: var(--border-mobileDekstop) 4px solid;
-  border-radius: 0.5rem;
+  border: var(--border-mobileDekstop) 2px solid;
+  /* border-radius: 0.5rem; */
   align-self: center;
   position: relative;
   left: 5rem;
 }
 .dekstop {
-  border: var(--border-mobileDekstop) 4px solid;
+  border: var(--border-mobileDekstop) 2px solid;
 
   width: 80%;
+  height: fit-content;
+  align-self: center;
+}
+
+/* last project */
+.project-card4 .ss-image div {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+}
+.project-card4 .ss-image {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: auto;
+}
+.project-card4 .mobile {
+  width: 20%;
+  height: fit-content;
+  border: var(--border-mobileDekstop) 2px solid;
+  position: static;
+}
+.project-card4 .dekstop {
+  border: var(--border-mobileDekstop) 2px solid;
+
+  width: 90%;
   height: fit-content;
   align-self: center;
 }
@@ -679,6 +706,9 @@ body.dark {
     position: relative;
     left: -8rem;
     top: 7rem;
+  }
+  .project-card4 .mobile {
+    position: static;
   }
 
   .contact-title {
